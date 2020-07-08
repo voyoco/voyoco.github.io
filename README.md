@@ -1,104 +1,57 @@
-如果 Github 访问速度比较慢或者图片无法刷新出来的话，可以转移到[码云](https://gitee.com/SnailClimb/JavaGuide )查看，或者[在线阅读](https://snailclimb.gitee.io/javaguide )。**如果你要提交 issue 或者 pr 的话请到 [Github](https://github.com/Snailclimb/JavaGuide) 提交。**
-
-> JavaGuide 的Star数量虽然比较多，但是它的价值和含金量一定是不能和 Dubbo、Nacos这些优秀的国产开源项目比的。希望国内可以出更多优秀的开源项目！
->
-> 另外，希望大家对面试不要抱有侥幸的心理，打铁还需自身硬！  我希望这个文档是为你学习  Java 指明方向，而不是用来应付面试用的。加油！奥利给！
-
-**开始阅读之前必看** ：
-
-1. [完结撒花！JavaGuide面试突击版来啦！](./docs/javaguide面试突击版.md)
-2. [JavaGuide重大更新记录](./docs/update-history.md)
-
-更多原创内容和干货分享：
-
-1. [公众号—JavaGuide](#公众号) ： 最新原创文章+免费领取本文档配套的《Java面试突击》以及Java工程师必备学习资源）
-
 <p align="center">
 <a href="https://github.com/Snailclimb/JavaGuide" target="_blank">
-	<img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-3/logo - 副本.png" width=""/>
+	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594182519234&di=9236191868b419badb9da9796900d614&imgtype=0&src=http%3A%2F%2Ft7.baidu.com%2Fit%2Fu%3D977819022%2C2092750521%26fm%3D193" width=""/>
 </a>
 </p>
-
-<p align="center">
-  <a href="https://snailclimb.gitee.io/javaguide"><img src="https://img.shields.io/badge/阅读-read-brightgreen.svg" alt="阅读"></a>
-  <a href="#公众号"><img src="https://img.shields.io/badge/%E5%85%AC%E4%BC%97%E5%8F%B7-JavaGuide-lightgrey.svg" alt="公众号"></a>
-  <a href="#公众号"><img src="https://img.shields.io/badge/PDF-Java面试突击-important.svg" alt="公众号"></a>
-  <a href="#投稿"><img src="https://img.shields.io/badge/support-投稿-critical.svg" alt="投稿"></a>
-  <a href="https://xiaozhuanlan.com/javainterview?rel=javaguide"><img src="https://img.shields.io/badge/Java-面试指南-important" alt="投稿"></a>
-</p>
-
-<h3 align="center">Sponsor</h3>
-
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://mp.weixin.qq.com/s/li9_YXNVxan6Qgt3Q9FYqA">
-          <img src="https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-7/WechatIMG1.png" style="margin: 0 auto;width:400px" /></a>
-      </td>
-      <td align="center" valign="middle">
-        <a href="https://github.com/yaonphy/Job-Hunt/blob/master/README.md" target="_blank">
-          <img src="https://6a6f-job-hunt-bvzy1-1259590017.tcb.qcloud.la/adForGithub/jobhunt-javaguide400.png" style="margin: 0 auto;width:400px" /></a>
-      </td>     
-    </tr>
-    <tr>
-      <td align="center" valign="middle">
-        <a href="https://mp.weixin.qq.com/s/uXgGt66Df3JC4GM7d0LlZg" target="_blank">
-          <img src="https://imgkr.cn-bj.ufileos.com/75fef802-16f0-4e0b-9d6f-a9173f24a40f.png" style="margin: 0 auto;width:400px" /></a>
-      </td>     
-    </tr>    
-  </tbody>
-</table>
-
 
 ## 目录
 
 - [Java](#java)
-    - [基础](#基础)
-    - [容器](#容器)
-    - [并发](#并发)
-    - [JVM](#jvm)
-    - [其他](#其他)
+  - [基础](#基础)
+  - [容器](#容器)
+  - [并发](#并发)
+  - [JVM](#jvm)
+  - [其他](#其他)
 - [网络](#网络)
 - [操作系统](#操作系统)
-    - [Linux](#linux)
+  - [Linux](#linux)
 - **[数据结构与算法](#数据结构与算法)**
-    - [数据结构](#数据结构)
-    - [算法](#算法)
+  - [数据结构](#数据结构)
+  - [算法](#算法)
 - [数据库](#数据库)
-    - [MySQL](#mysql)
-    - [Redis](#redis)
+  - [MySQL](#mysql)
+  - [Redis](#redis)
 - [系统设计](#系统设计)
-    - [必知](#必知)
-    - [常用框架](#常用框架)
-        - [Spring](#springspringboot)
-        - [SpringBoot](#springboot)
-        - [MyBatis](#mybatis)
-    - [认证授权(JWT、SSO)](#认证授权)
-    - [分布式](#分布式)
-        - [Elasticsearch(分布式搜索引擎)](#elasticsearch分布式搜索引擎)
-        - [RPC](#rpc)
-        - [消息队列](#消息队列)
-        - [API 网关](#api-网关)
-        - [分布式id](#分布式id)
-        - [分布式限流](#分布式限流)
-        - [分布式接口幂等性](#分布式接口幂等性)
-        - [数据库扩展](#数据库扩展)
-        - [ZooKeeper](#zookeeper)
-    - [大型网站架构](#大型网站架构)
-        - [性能测试](#性能测试)
-        - [高并发](#高并发)
-        - [高可用](#高可用)
-    - [微服务](#微服务)
-        - [Spring Cloud](#spring-cloud)
+  - [必知](#必知)
+  - [常用框架](#常用框架)
+    - [Spring](#springspringboot)
+    - [SpringBoot](#springboot)
+    - [MyBatis](#mybatis)
+  - [认证授权(JWT、SSO)](#认证授权)
+  - [分布式](#分布式)
+    - [Elasticsearch(分布式搜索引擎)](#elasticsearch分布式搜索引擎)
+    - [RPC](#rpc)
+    - [消息队列](#消息队列)
+    - [API 网关](#api-网关)
+    - [分布式id](#分布式id)
+    - [分布式限流](#分布式限流)
+    - [分布式接口幂等性](#分布式接口幂等性)
+    - [数据库扩展](#数据库扩展)
+    - [ZooKeeper](#zookeeper)
+  - [大型网站架构](#大型网站架构)
+    - [性能测试](#性能测试)
+    - [高并发](#高并发)
+    - [高可用](#高可用)
+  - [微服务](#微服务)
+    - [Spring Cloud](#spring-cloud)
 - [必会工具](#必会工具)
-    - [Git](#git)
-    - [Docker](#docker)
+  - [Git](#git)
+  - [Docker](#docker)
 - [面试指南](#面试指南)
 - [Java学习常见问题汇总](#java学习常见问题汇总)
 - [资源](#资源)
-    - [Java程序员必备书单](#java程序员必备书单)
-    - [实战项目推荐](#实战项目推荐)
+  - [Java程序员必备书单](#java程序员必备书单)
+  - [实战项目推荐](#实战项目推荐)
 - [待办](#待办)
 - [说明](#说明)
 
@@ -244,7 +197,7 @@
 #### Spring/SpringBoot
 
 1. **[Spring 常见问题总结](docs/system-design/framework/spring/SpringInterviewQuestions.md)**
-3. **[SpringBoot 指南/常见面试题总结](https://github.com/Snailclimb/springboot-guide)**
+2. **[SpringBoot 指南/常见面试题总结](https://github.com/Snailclimb/springboot-guide)**
 3. **[Spring/Spring常用注解总结！安排！](./docs/system-design/framework/spring/spring-annotations.md)**
 4. **[Spring事务总结](docs/system-design/framework/spring/spring-transaction.md)**
 5. [Spring IoC 和 AOP详解](https://mp.weixin.qq.com/s?__biz=Mzg2OTA0Njk0OA==&mid=2247486938&idx=1&sn=c99ef0233f39a5ffc1b98c81e02dfcd4&chksm=cea24211f9d5cb07fa901183ba4d96187820713a72387788408040822ffb2ed575d28e953ce7&token=1666190828&lang=zh_CN#rd)
@@ -431,7 +384,7 @@ SSO(Single Sign On)即单点登录说的是用户登陆多个子系统的其中�
 开源 JavaGuide 初始想法源于自己的个人那一段比较迷茫的学习经历。主要目的是为了通过这个开源平台来帮助一些在学习 Java 或者面试过程中遇到问题的小伙伴。
 
 *  **对于 Java 初学者来说：** 本文档倾向于给你提供一个比较详细的学习路径，让你对于Java整体的知识体系有一个初步认识。另外，本文的一些文章
-也是你学习和复习 Java 知识不错的实践；
+   也是你学习和复习 Java 知识不错的实践；
 *  **对于非 Java 初学者来说：** 本文档更适合回顾知识，准备面试，搞清面试应该把重心放在那些问题上。要搞清楚这个道理：提前知道那些面试常见，不是为了背下来应付面试，而是为了让你可以更有针对的学习重点。
 
 Markdown 格式参考：[Github Markdown格式](https://guides.github.com/features/mastering-markdown/)，表情素材来自：[EMOJI CHEAT SHEET](https://www.webpagefx.com/tools/emoji-cheat-sheet/)。
@@ -518,5 +471,3 @@ Logo下的小图标是使用[Shields.IO](https://shields.io/) 生成的。
 **Java工程师必备学习资源:** 一些Java工程师常用学习资源公众号后台回复关键字 **“1”** 即可免费无套路获取。 
 
 ![我的公众号](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/167598cd2e17b8ec.png)
-
-
